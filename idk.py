@@ -48,23 +48,6 @@ while len(gVertices)!=0:
 	degrees = dict()
 	
 
-print('\nMinimum independent dominating set in the graph = ',set(S))
-q = 0
-connq = set()
-while q < len(S):
-	w = q+1
-	
-	while w < len(S)-q:
-		rs = set(connectedMinSet[q]).intersection(set(connectedMinSet[w]))
-		
-		if len(rs) ==1:
-			connq |= rs
-		if len(rs) >1:
-			connq |= set(random.sample(rs,1))
-			
-		w +=1
-	q +=1
-
 connq |= set(S)
 print('\nMinimum connected dominating set in the graph =',connq)
 print('\nDomination number of the graph =', len(connq))
