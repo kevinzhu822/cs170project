@@ -3,8 +3,8 @@
 In our solver, we have the following dependencies:
 
  - NetworkX
- - Parse
- - Utils
+ - Parse (included in skeleton code **`parse.py`**)
+ - Utils (included in skeleton code as **`utils.py`**)
  - Sys
  - Os
 
