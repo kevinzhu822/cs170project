@@ -32,19 +32,8 @@ def solve(G):
 
     return T2
     
-def DegreeCheck(G):
+def degreeCheck(G):
 	numNodes = G.number_of_nodes() -1
-
-	# for node in G.nodes():
-	# 	counter = 0
-	# 	for neighbor in G.neighbors(node):
-	# 		counter +=1
-
-	# 	if counter == numNodes - 1:
-	# 		G.clear()
-	# 		G.add_node(node)
-	# 	return True
-	# return False
 	for node in G.nodes():
 		if len(list(G.neighbors(node))) == numNodes:
 			return (True, node)
@@ -113,20 +102,3 @@ if __name__ == "__main__":
         # print(read_output_file(input_path, G))
         assert is_valid_network(G, T)
         write_output_file(T, f"{output_dir}/{graph_name}.out")
-
-# if __name__ == "__main__":
-#     output_dir = "outputs"
-#     input_dir = "inputs"
-#     total_distance = 0 
-#     for input_path in os.listdir(input_dir):
-#         print(input_path)
-#         graph_name = input_path.split(".")[0]
-#         G = read_input_file(f"{input_dir}/{input_path}")
-#         T = solve(G)
-#         if not (T.number_of_nodes() == 0):
-#             total_distance += average_pairwise_distance(T)
-#             print(total_distance)
-#         # print(input_path)
-#             assert is_valid_network(G, T)
-#         write_output_file(T, f"{output_dir}/{graph_name}.out")
-#     print("Average pairwise distance total: {}".format(total_distance))
