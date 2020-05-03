@@ -10,7 +10,7 @@ In our solver, we have the following dependencies:
 
 ## Usage
 First create a folder called "inputs" in the same directory as **`solver.py`**
-An "outputs" folder should also be in the same directory as **`solver.py`** as well.
+An "outputs" folder to store the outputs of **`solver.py`** should also be in the same directory.
 
 To run it on all inputs in the "inputs" folder:
 ```python
@@ -22,4 +22,5 @@ To run it on a single input, comment out the last section of code starting from 
 ```python
 python solver.py <path_to_input_file>
 ```
+This will out a file called **`output.out`** in the same directory as **`solver.py`**.
 
